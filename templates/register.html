@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/reg.css"/>
+    <link rel="stylesheet" href="../static/css/output.css"/>
+    <link rel="stylesheet" href="../static/css/font.css">
     <title>Registration</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,89 +13,100 @@
     <script src="../static/js/checkbox.js"></script>
     <script src="../static/js/language.js"></script>
 </head>
-<body>
-<div class="form">
-    <div class="div">
-        <div class="artwork">
-            <div class="overlap-group">
-                <img class="frame" src="https://c.animaapp.com/ruvuNiNv/img/frame-11.svg" alt="Image not found">
-                <div class="text-wrapper chakra-petch-medium">RTeam cyber alley</div>
-                <div class="text-wrapper-2 chakra-petch-light">@renderpunk</div>
+
+<body class="bg-gray-50 min-w-screen">
+<div class="container mx-auto sm:w-1/2 lg:w-full">
+    <div class="grid sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-4 m-4 w-full">
+        <!-- Блок с фото -->
+        <div class="sm:order-1 lg:order-2 sm:col-auto lg:col-span-2 xl:col-span-3 relative bg-cover bg-center rounded-2xl w-full"
+             style="background-image: url('https://c.animaapp.com/ruvuNiNv/img/pexels-tony-mrst-93331-11114133-1.png');">
+            <div class="absolute bottom-4 right-4 flex items-center space-x-2 text-white">
+                <div class="text-right">
+                    <h2 class="text-md chakra-petch-bold">RTeam cyber alley</h2>
+                    <p class="text-sm chakra-petch-light">@renderpunk</p>
+                </div>
+                <button class="flex items-center justify-center w-8 h-8 rounded-full"
+                        onclick="alert('u have been pwned xD')">
+                    <img src="https://c.animaapp.com/ruvuNiNv/img/frame-11.svg" alt="Play Icon">
+                </button>
             </div>
         </div>
-    </div>
-    <div class="overlap-wrapper">
-        <div class="overlap">
-            <div class="group">
-                <div class="icon">
-                    <img class="vector" src="https://c.animaapp.com/ruvuNiNv/img/vector.svg" alt="Logo not found">
-                    <div class="r-team chakra-petch-bold">RTEAM</div>
+        <!-- Форма -->
+        <div class="sm:order-2 lg:order-1 sm:col-auto lg:col-span-1 xl:col-span-2 p-6 bg-gray-200 rounded-2xl">
+            <div class="flex items-center justify-between">
+                <div class="flex items-start space-x-2">
+                    <img class="h-8" src="../static/img/icon.svg" alt="Logo not found">
                 </div>
-                <div class="form">
-                    <div class="language-dropdown">
-                        <button class="dropdown-toggle">
-                            <img src="https://c.animaapp.com/ruvuNiNv/img/vector-1.svg" alt="Globe Icon">
-                            <span class="chakra-petch-light">EN</span>
-                            <img class="dropdown-arrow" src="https://c.animaapp.com/ruvuNiNv/img/container.svg"
-                                 alt="Arrow">
-                        </button>
-                        <ul class="dropdown-menu chakra-petch-light">
-                            <li data-lang="en">EN</li>
-                            <li data-lang="ru">RU</li>
-                            <li data-lang="kz">KZ</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="text-wrapper-8 chakra-petch-regular">Reach out, fucker</div>
-                <p class="lorem-ipsum-dolor chakra-petch-light">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                </p>
-                <div class="overlap-group-2">
-                    <div class="cont">
-                        <div class="field">
-                            <label class="input chakra-petch-medium" for="first-name">First Name</label>
-                            <input class="field-2 pixelify-sans-regular" id="first-name" placeholder="First name"
-                                   type="text"/>
-                        </div>
-                        <div class="field">
-                            <label class="input chakra-petch-medium" for="last-name">Last Name</label>
-                            <input class="field-2 pixelify-sans-regular" id="last-name" placeholder="Last name"
-                                   type="text"/>
-                        </div>
-                        <div class="field">
-                            <label class="input chakra-petch-medium" for="username">Username</label>
-                            <input class="field-2 pixelify-sans-regular" id="username" placeholder="Username"
-                                   type="text"/>
-                        </div>
-                        <div class="field">
-                            <label class="input chakra-petch-medium" for="email">Email</label>
-                            <input class="field-2 pixelify-sans-regular" id="email" placeholder="Email" type="email"/>
-                        </div>
-                        <div class="field-3">
-                            <label class="text-wrapper-3 chakra-petch-medium" for="profile-link">Public profile link
-                                (optional)</label>
-                            <input class="field-2 pixelify-sans-regular" id="profile-link"
-                                   placeholder="Public profile link"
-                                   type="text"/>
-                        </div>
-                        <div class="field-3">
-                            <label class="text-wrapper-3 chakra-petch-medium" for="comments">Comments (optional)</label>
-                            <textarea class="field-4 pixelify-sans-regular" id="comments"
-                                      placeholder="Comments"></textarea>
-                        </div>
-                        <div class="field-5">
-                            <div class="frame-2" onclick="toggleCheckbox(this)"></div>
-                            <p class="you-agree-to-our">
-                                <span class="span chakra-petch-regular">You agree to our</span>
-                                <a href="#" class="text-wrapper-6 chakra-petch-regular">privacy policy</a>
-                            </p>
-                        </div>
-                        <a ><button class="point"><span class="text-wrapper-7">Send application</span></button></a>
-                    </div>
+                <div class="relative language-dropdown">
+                    <button class="flex items-center bg-gray-300 p-2 rounded-lg border w-24 dropdown-toggle">
+                        <img src="https://c.animaapp.com/ruvuNiNv/img/vector-1.svg" alt="Globe Icon" class="mr-2">
+                        <span class="text-sm font-light">EN</span>
+                        <img class="ml-2" src="https://c.animaapp.com/ruvuNiNv/img/container.svg" alt="Arrow">
+                    </button>
+                    <ul class="absolute hidden mt-1 bg-white shadow-lg rounded-lg border border-gray-300 w-24 dropdown-menu">
+                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-200 text-center" data-lang="en">EN</li>
+                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-200 text-center" data-lang="ru">RU</li>
+                        <li class="px-4 py-2 cursor-pointer hover:bg-gray-200 text-center" data-lang="kz">KZ</li>
+                    </ul>
                 </div>
             </div>
+            <h1 class="mt-8 text-3xl chakra-petch-bold">Reach out, fucker</h1>
+            <p class="mt-2 chakra-petch-light text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.</p>
+            <form class="mt-6 space-y-6">
+                <div class="flex space-x-4">
+                    <div class="flex-1">
+                        <label for="first-name" class="block text-sm chakra-petch-medium">First Name</label>
+                        <input type="text" id="first-name" placeholder="First name"
+                               class="mt-1 block w-full p-2 border border-gray-300 rounded-lg pixelify-sans-regular">
+                    </div>
+                    <div class="flex-1">
+                        <label for="last-name" class="block text-sm chakra-petch-medium">Last Name</label>
+                        <input type="text" id="last-name" placeholder="Last name"
+                               class="mt-1 block w-full p-2 border border-gray-300 rounded-lg pixelify-sans-regular">
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <div class="flex-1">
+                        <label for="username" class="block text-sm chakra-petch-medium">Username</label>
+                        <input type="text" id="username" placeholder="Username"
+                               class="mt-1 block w-full p-2 border border-gray-300 rounded-lg pixelify-sans-regular">
+                    </div>
+                    <div class="flex-1">
+                        <label for="email" class="block text-sm chakra-petch-medium">Email</label>
+                        <input type="email" id="email" placeholder="Email"
+                               class="mt-1 block w-full p-2 border border-gray-300 rounded-lg pixelify-sans-regular">
+                    </div>
+                </div>
+                <div>
+                    <label for="profile-link" class="block text-sm chakra-petch-medium">Public profile link
+                        (optional)</label>
+                    <input type="text" id="profile-link" placeholder="Public profile link"
+                           class="mt-1 block w-full p-2 border border-gray-300 rounded-lg pixelify-sans-regular">
+                </div>
+                <div>
+                    <label for="comments" class="block text-sm chakra-petch-medium">Comments (optional)</label>
+                    <textarea id="comments" placeholder="Comments"
+                              class="mt-1 block w-full p-4 border border-gray-300 rounded-lg pixelify-sans-regular resize-none"></textarea>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <input type="checkbox" id="agree" class="custom-checkbox">
+                    <label for="agree" class="text-sm chakra-petch-medium">
+                        You agree to our
+                        <a href="#"
+                           class="text-black underline underline-offset-4 hover:no-underline chakra-petch-bold">
+                            privacy policy
+                        </a>
+                    </label>
+                </div>
+                <button type="submit"
+                        class="w-full py-2 bg-black text-white font-bold rounded-lg hover:bg-gray-600 chakra-petch-bold">
+                    Send application
+                </button>
+            </form>
         </div>
     </div>
 </div>
 </body>
+
 </html>
