@@ -1,5 +1,5 @@
 function loadLanguage(language) {
-    fetch(`/static/language_pack/${language}.json`)
+    fetch(`/static/language/${language}.json`)
         .then(response => response.json())
         .then(data => {
             document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -12,6 +12,27 @@ function loadLanguage(language) {
                 const translation = key.split('.').reduce((obj, i) => obj?.[i], data);
                 if (translation) element.title = translation;
             });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                const translation = key.split('.').reduce((obj, i) => obj?.[i], data);
+                if (translation) element.placeholder = translation;
+            });
+            document.querySelectorAll('a[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const translation = key.split('.').reduce((obj, i) => obj?.[i], data);
+                if (translation) element.innerText = translation;
+            });
+            const buttonContainer = document.getElementById('language-buttons');
+            buttonContainer.innerHTML = ''; // Clear previous buttons
+            let button;
+            if (language === 'en') {
+                button = '<button class="btn-en">English Button</button>';
+            } else if (language === 'ru') {
+                button = '<button class="btn-ru">Russian Button</button>';
+            } else if (language === 'kz') {
+                button = '<button class="btn-kz">Kazakh Button</button>';
+            }
+            buttonContainer.innerHTML = button;
         })
         .catch(error => console.error('Error loading language file:', error));
 }

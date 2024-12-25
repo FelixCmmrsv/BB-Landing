@@ -1,0 +1,24 @@
+{
+  "register_html": {
+    "title": "Тіркеу",
+    "image_alt": "Сурет табылмады",
+    "team_name": "RTeam кибер аллеясы",
+    "form_title": "Бізбен байланысыңыз",
+    "form_description": "Бет аударма функциясын тексеру үшін қазақ тілінде сынақ мәтіні",
+    "first_name_label": "Аты",
+    "first_name_placeholder": "Аты",
+    "last_name_label": "Тегі",
+    "last_name_placeholder": "Тегі",
+    "username_label": "Пайдаланушы аты",
+    "username_placeholder": "Пайдаланушы аты",
+    "email_label": "Электрондық пошта",
+    "email_placeholder": "Электрондық пошта",
+    "profile_link_label": "Қоғамдық профиль сілтемесі (міндетті емес)",
+    "profile_link_placeholder": "Қоғамдық профиль сілтемесі",
+    "comments_label": "Пікірлер (міндетті емес)",
+    "comments_placeholder": "Пікірлер",
+    "agree_text": "Сіз біздің",
+    "privacy_policy": "құпиялылық саясатымызбен келісесіз",
+    "send_application_button": "Өтінімді жіберу"
+  }
+}

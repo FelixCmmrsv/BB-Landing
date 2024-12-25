@@ -5,34 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/output.css"/>
     <link rel="stylesheet" href="../static/css/font.css">
-    <title>Registration</title>
+    <title data-i18n="register_html.title">Registration</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Pixelify+Sans:wght@400..700&display=swap"
           rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
     <script src="../static/js/checkbox.js"></script>
     <script src="../static/js/language.js"></script>
 </head>
-
 <body class="bg-gray-50 min-w-screen">
-<div class="container mx-auto sm:w-1/2 lg:w-full">
-    <div class="grid sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-4 m-4 w-full">
+<div class="container mx-auto px-auto">
+    <div class="grid sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-6 gap-4 w-full my-4">
         <!-- Блок с фото -->
-        <div class="sm:order-1 lg:order-2 sm:col-auto lg:col-span-2 xl:col-span-3 relative bg-cover bg-center rounded-2xl w-full"
-             style="background-image: url('https://c.animaapp.com/ruvuNiNv/img/pexels-tony-mrst-93331-11114133-1.png');">
+        <div class="sm:order-1 lg:order-2 sm:col-span-1 lg:col-span-2 xl:col-span-4 relative rounded-2xl overflow-hidden">
+            <img src="https://c.animaapp.com/ruvuNiNv/img/pexels-tony-mrst-93331-11114133-1.png"
+                 alt="Image not found"
+                 data-i18n-title="register_html.image_alt"
+                 class="w-full h-full object-contain sm:object-contain lg:object-cover">
             <div class="absolute bottom-4 right-4 flex items-center space-x-2 text-white">
                 <div class="text-right">
-                    <h2 class="text-md chakra-petch-bold">RTeam cyber alley</h2>
+                    <h2 class="text-md chakra-petch-bold" data-i18n="register_html.team_name">RTeam cyber alley</h2>
                     <p class="text-sm chakra-petch-light">@renderpunk</p>
                 </div>
-                <button class="flex items-center justify-center w-8 h-8 rounded-full"
+                <button class="flex items-center justify-center w-8 h-8 rounded-full bg-black bg-opacity-50"
                         onclick="alert('u have been pwned xD')">
-                    <img src="https://c.animaapp.com/ruvuNiNv/img/frame-11.svg" alt="Play Icon">
+                    <img src="https://c.animaapp.com/ruvuNiNv/img/frame-11.svg" alt="Play Icon"
+                         data-i18n-title="register_html.play_button_alt">
                 </button>
             </div>
         </div>
         <!-- Форма -->
-        <div class="sm:order-2 lg:order-1 sm:col-auto lg:col-span-1 xl:col-span-2 p-6 bg-gray-200 rounded-2xl">
+        <div class="sm:order-2 lg:order-1 sm:col-span-1 lg:col-span-1 xl:col-span-2 p-6 bg-gray-200 rounded-2xl">
             <div class="flex items-center justify-between">
                 <div class="flex items-start space-x-2">
                     <img class="h-8" src="../static/img/icon.svg" alt="Logo not found">
@@ -40,7 +44,8 @@
                 <div class="relative language-dropdown">
                     <button class="flex items-center bg-gray-300 p-2 rounded-lg border w-24 dropdown-toggle">
                         <img src="https://c.animaapp.com/ruvuNiNv/img/vector-1.svg" alt="Globe Icon" class="mr-2">
-                        <span class="text-sm font-light">EN</span>
+                        <span class="text-sm font-light"
+                              data-i18n="register_html.language_dropdown.options.default">EN</span>
                         <img class="ml-2" src="https://c.animaapp.com/ruvuNiNv/img/container.svg" alt="Arrow">
                     </button>
                     <ul class="absolute hidden mt-1 bg-white shadow-lg rounded-lg border border-gray-300 w-24 dropdown-menu">
@@ -50,63 +55,71 @@
                     </ul>
                 </div>
             </div>
-            <h1 class="mt-8 text-3xl chakra-petch-bold">Reach out, fucker</h1>
-            <p class="mt-2 chakra-petch-light text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit.</p>
+            <h1 class="mt-8 text-3xl chakra-petch-bold" data-i18n="register_html.form_title">Reach out, fucker</h1>
+            <p class="mt-2 chakra-petch-light text-gray-600" data-i18n="register_html.form_description">Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit.</p>
             <form class="mt-6 space-y-6">
                 <div class="flex space-x-4">
                     <div class="flex-1">
-                        <label for="first-name" class="block text-sm chakra-petch-medium">First Name</label>
+                        <label for="first-name" class="block text-sm chakra-petch-medium"
+                               data-i18n="register_html.first_name_label">First Name</label>
                         <input type="text" id="first-name" placeholder="First name"
-                               class="mt-1 block w-full p-2 border border-gray-300 rounded-lg pixelify-sans-regular">
+                               data-i18n-placeholder="register_html.first_name_placeholder"
+                               class="mt-1 block w-full p-2 border border-gray-300 rounded-lg tiny5-regular">
                     </div>
                     <div class="flex-1">
-                        <label for="last-name" class="block text-sm chakra-petch-medium">Last Name</label>
+                        <label for="last-name" class="block text-sm chakra-petch-medium"
+                               data-i18n="register_html.last_name_label">Last Name</label>
                         <input type="text" id="last-name" placeholder="Last name"
-                               class="mt-1 block w-full p-2 border border-gray-300 rounded-lg pixelify-sans-regular">
+                               data-i18n-placeholder="register_html.last_name_placeholder"
+                               class="mt-1 block w-full p-2 border border-gray-300 rounded-lg tiny5-regular">
                     </div>
                 </div>
                 <div class="flex space-x-4">
                     <div class="flex-1">
-                        <label for="username" class="block text-sm chakra-petch-medium">Username</label>
+                        <label for="username" class="block text-sm chakra-petch-medium"
+                               data-i18n="register_html.username_label">Username</label>
                         <input type="text" id="username" placeholder="Username"
-                               class="mt-1 block w-full p-2 border border-gray-300 rounded-lg pixelify-sans-regular">
+                               data-i18n-placeholder="register_html.username_placeholder"
+                               class="mt-1 block w-full p-2 border border-gray-300 rounded-lg tiny5-regular">
                     </div>
                     <div class="flex-1">
-                        <label for="email" class="block text-sm chakra-petch-medium">Email</label>
+                        <label for="email" class="block text-sm chakra-petch-medium"
+                               data-i18n="register_html.email_label">Email</label>
                         <input type="email" id="email" placeholder="Email"
-                               class="mt-1 block w-full p-2 border border-gray-300 rounded-lg pixelify-sans-regular">
+                               data-i18n-placeholder="register_html.email_placeholder"
+                               class="mt-1 block w-full p-2 border border-gray-300 rounded-lg tiny5-regular">
                     </div>
                 </div>
                 <div>
-                    <label for="profile-link" class="block text-sm chakra-petch-medium">Public profile link
-                        (optional)</label>
+                    <label for="profile-link" class="block text-sm chakra-petch-medium"
+                           data-i18n="register_html.profile_link_label">Public profile link (optional)</label>
                     <input type="text" id="profile-link" placeholder="Public profile link"
-                           class="mt-1 block w-full p-2 border border-gray-300 rounded-lg pixelify-sans-regular">
+                           data-i18n-placeholder="register_html.profile_link_placeholder"
+                           class="mt-1 block w-full p-2 border border-gray-300 rounded-lg tiny5-regular">
                 </div>
                 <div>
-                    <label for="comments" class="block text-sm chakra-petch-medium">Comments (optional)</label>
+                    <label for="comments" class="block text-sm chakra-petch-medium"
+                           data-i18n="register_html.comments_label">Comments (optional)</label>
                     <textarea id="comments" placeholder="Comments"
-                              class="mt-1 block w-full p-4 border border-gray-300 rounded-lg pixelify-sans-regular resize-none"></textarea>
+                              data-i18n-placeholder="register_html.comments_placeholder"
+                              class="mt-1 block w-full p-2 border border-gray-300 rounded-lg tiny5-regular resize-none"></textarea>
                 </div>
                 <div class="flex items-center space-x-2">
                     <input type="checkbox" id="agree" class="custom-checkbox">
-                    <label for="agree" class="text-sm chakra-petch-medium">
+                    <label for="agree" class="text-sm chakra-petch-medium" data-i18n="register_html.agree_text">
                         You agree to our
-                        <a href="#"
-                           class="text-black underline underline-offset-4 hover:no-underline chakra-petch-bold">
-                            privacy policy
-                        </a>
                     </label>
+                    <a href="#" class="text-black underline underline-offset-4 hover:no-underline chakra-petch-bold"
+                       data-i18n="register_html.privacy_policy">privacy policy
+                    </a>
                 </div>
                 <button type="submit"
-                        class="w-full py-2 bg-black text-white font-bold rounded-lg hover:bg-gray-600 chakra-petch-bold">
-                    Send application
+                        class="w-full py-2 bg-black text-white font-bold rounded-lg hover:bg-gray-600 chakra-petch-bold"
+                        data-i18n="register_html.send_application_button">Send application
                 </button>
             </form>
         </div>
     </div>
 </div>
 </body>
-
-</html>

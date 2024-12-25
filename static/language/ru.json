@@ -1,0 +1,24 @@
+{
+  "register_html": {
+    "title": "Регистрация",
+    "image_alt": "Изображение не найдено",
+    "team_name": "Кибер аллея RTeam",
+    "form_title": "Свяжитесь с нами",
+    "form_description": "Тестовый текст на русском языке для проверки функционала по переводу страницы",
+    "first_name_label": "Имя",
+    "first_name_placeholder": "Имя",
+    "last_name_label": "Фамилия",
+    "last_name_placeholder": "Фамилия",
+    "username_label": "Логин",
+    "username_placeholder": "Логин",
+    "email_label": "Электронная почта",
+    "email_placeholder": "Электронная почта",
+    "profile_link_label": "Ссылка на публичный профиль (необязательно)",
+    "profile_link_placeholder": "Ссылка на публичный профиль",
+    "comments_label": "Комментарии (необязательно)",
+    "comments_placeholder": "Комментарии",
+    "agree_text": "Вы соглашаетесь с нашей",
+    "privacy_policy": "политикой конфиденциальности",
+    "send_application_button": "Отправить заявку"
+  }
+}
