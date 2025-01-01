@@ -3,14 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-i18n="register_html.title">Registration</title>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="../static/css/output.css"/>
     <link rel="stylesheet" href="../static/css/font.css">
-    <title data-i18n="register_html.title">Registration</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Pixelify+Sans:wght@400..700&display=swap"
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
     <script src="../static/js/checkbox.js"></script>
     <script src="../static/js/language.js"></script>
 </head>
@@ -20,7 +27,6 @@
         <!-- Блок с фото -->
         <div class="sm:order-1 lg:order-2 sm:col-span-1 lg:col-span-2 xl:col-span-4 relative rounded-2xl overflow-hidden">
             <img src="https://c.animaapp.com/ruvuNiNv/img/pexels-tony-mrst-93331-11114133-1.png"
-                 alt="Image not found"
                  data-i18n-title="register_html.image_alt"
                  class="w-full h-full object-contain sm:object-contain lg:object-cover">
             <div class="absolute bottom-4 right-4 flex items-center space-x-2 text-white">
@@ -58,19 +64,19 @@
             <h1 class="mt-8 text-3xl chakra-petch-bold" data-i18n="register_html.form_title">Reach out, fucker</h1>
             <p class="mt-2 chakra-petch-light text-gray-600" data-i18n="register_html.form_description">Lorem ipsum
                 dolor sit amet, consectetur adipiscing elit.</p>
-            <form class="mt-6 space-y-6">
+            <form action="/registration/submit" method="post" class="mt-6 space-y-6">
                 <div class="flex space-x-4">
                     <div class="flex-1">
                         <label for="first-name" class="block text-sm chakra-petch-medium"
                                data-i18n="register_html.first_name_label">First Name</label>
-                        <input type="text" id="first-name" placeholder="First name"
+                        <input type="text" id="first-name" name="first-name" placeholder="First name"
                                data-i18n-placeholder="register_html.first_name_placeholder"
                                class="mt-1 block w-full p-2 border border-gray-300 rounded-lg tiny5-regular">
                     </div>
                     <div class="flex-1">
                         <label for="last-name" class="block text-sm chakra-petch-medium"
                                data-i18n="register_html.last_name_label">Last Name</label>
-                        <input type="text" id="last-name" placeholder="Last name"
+                        <input type="text" id="last-name" name="last-name" placeholder="Last name"
                                data-i18n-placeholder="register_html.last_name_placeholder"
                                class="mt-1 block w-full p-2 border border-gray-300 rounded-lg tiny5-regular">
                     </div>
@@ -79,14 +85,14 @@
                     <div class="flex-1">
                         <label for="username" class="block text-sm chakra-petch-medium"
                                data-i18n="register_html.username_label">Username</label>
-                        <input type="text" id="username" placeholder="Username"
+                        <input type="text" id="username" name="username" placeholder="Username"
                                data-i18n-placeholder="register_html.username_placeholder"
                                class="mt-1 block w-full p-2 border border-gray-300 rounded-lg tiny5-regular">
                     </div>
                     <div class="flex-1">
                         <label for="email" class="block text-sm chakra-petch-medium"
                                data-i18n="register_html.email_label">Email</label>
-                        <input type="email" id="email" placeholder="Email"
+                        <input type="email" id="email" name="email" placeholder="Email"
                                data-i18n-placeholder="register_html.email_placeholder"
                                class="mt-1 block w-full p-2 border border-gray-300 rounded-lg tiny5-regular">
                     </div>
@@ -94,19 +100,19 @@
                 <div>
                     <label for="profile-link" class="block text-sm chakra-petch-medium"
                            data-i18n="register_html.profile_link_label">Public profile link (optional)</label>
-                    <input type="text" id="profile-link" placeholder="Public profile link"
+                    <input type="text" id="profile-link" name="profile-link" placeholder="Public profile link"
                            data-i18n-placeholder="register_html.profile_link_placeholder"
                            class="mt-1 block w-full p-2 border border-gray-300 rounded-lg tiny5-regular">
                 </div>
                 <div>
                     <label for="comments" class="block text-sm chakra-petch-medium"
                            data-i18n="register_html.comments_label">Comments (optional)</label>
-                    <textarea id="comments" placeholder="Comments"
+                    <textarea id="comments" name="comments" placeholder="Comments"
                               data-i18n-placeholder="register_html.comments_placeholder"
                               class="mt-1 block w-full p-2 border border-gray-300 rounded-lg tiny5-regular resize-none"></textarea>
                 </div>
                 <div class="flex items-center space-x-2">
-                    <input type="checkbox" id="agree" class="custom-checkbox">
+                    <input type="checkbox" id="agree" name="agree" class="custom-checkbox">
                     <label for="agree" class="text-sm chakra-petch-medium" data-i18n="register_html.agree_text">
                         You agree to our
                     </label>

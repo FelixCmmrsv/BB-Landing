@@ -22,17 +22,6 @@ function loadLanguage(language) {
                 const translation = key.split('.').reduce((obj, i) => obj?.[i], data);
                 if (translation) element.innerText = translation;
             });
-            const buttonContainer = document.getElementById('language-buttons');
-            buttonContainer.innerHTML = ''; // Clear previous buttons
-            let button;
-            if (language === 'en') {
-                button = '<button class="btn-en">English Button</button>';
-            } else if (language === 'ru') {
-                button = '<button class="btn-ru">Russian Button</button>';
-            } else if (language === 'kz') {
-                button = '<button class="btn-kz">Kazakh Button</button>';
-            }
-            buttonContainer.innerHTML = button;
         })
         .catch(error => console.error('Error loading language file:', error));
 }
